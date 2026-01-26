@@ -6,6 +6,7 @@
 <title>Reseñas Pro ⭐</title>
 
 <style>
+
 body{
 margin:0;
 font-family:Arial,sans-serif;
@@ -19,6 +20,17 @@ padding:50px 20px;
 text-align:center;
 }
 
+header h1{
+font-size:2.6em;
+margin:0;
+}
+
+header p{
+opacity:.9;
+max-width:700px;
+margin:auto;
+}
+
 section{
 padding:60px 20px;
 max-width:1200px;
@@ -30,18 +42,25 @@ text-align:center;
 margin-bottom:40px;
 }
 
+.title h2{
+font-size:2em;
+margin-bottom:10px;
+}
+
+/* Packs */
+
 .packs{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .pack{
 background:rgba(255,255,255,0.12);
-border-radius:16px;
+border-radius:15px;
 padding:25px;
 text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,0.5);
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 transition:.3s;
 }
 
@@ -51,13 +70,13 @@ background:rgba(255,255,255,0.18);
 }
 
 .stars{
-font-size:1.6em;
+font-size:1.5em;
 color:gold;
 margin-bottom:10px;
 }
 
 .price{
-font-size:2em;
+font-size:1.9em;
 color:#00ffcc;
 margin:15px 0;
 font-weight:bold;
@@ -74,12 +93,54 @@ padding:6px 0;
 opacity:.9;
 }
 
+/* Info */
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.info-box{
+background:rgba(255,255,255,0.12);
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.info-box h3{
+margin-top:0;
+color:#00ffcc;
+}
+
+/* Reviews */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review{
+background:rgba(255,255,255,0.12);
+padding:22px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.review span{
+color:gold;
+font-weight:bold;
+}
+
+/* Botones */
+
 .btn{
 display:inline-block;
 margin-top:15px;
 background:#00ffcc;
 color:#000;
-padding:12px 24px;
+padding:12px 22px;
 border-radius:25px;
 text-decoration:none;
 font-weight:bold;
@@ -91,31 +152,36 @@ background:#00e6b8;
 transform:scale(1.05);
 }
 
-/* Botón WhatsApp */
-.whatsapp-float{
+/* WhatsApp flotante */
+
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:#fff;
+color:white;
+padding:14px 22px;
 border-radius:50px;
-padding:14px 20px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.4);
+box-shadow:0 5px 15px rgba(0,0,0,.5);
 z-index:999;
 }
 
-.whatsapp-float:hover{
+.whatsapp:hover{
 background:#1ebe5d;
 }
 
+/* Footer */
+
 footer{
-background:rgba(0,0,0,.7);
+background:rgba(0,0,0,0.7);
 text-align:center;
 padding:25px;
 font-size:.9em;
+opacity:.9;
 }
+
 </style>
 </head>
 
@@ -123,16 +189,20 @@ font-size:.9em;
 
 <header>
 <h1>⭐ Reseñas Pro</h1>
-<p>Impulsa tu negocio con reseñas positivas y aumenta tus ventas</p>
+<p>
+Impulsa tu negocio con reseñas positivas, mejora tu reputación
+y aumenta tus ventas con nuestros planes profesionales.
+</p>
 </header>
 
 
 <!-- PACKS -->
+
 <section>
 
 <div class="title">
 <h2>📦 Nuestros Packs</h2>
-<p>Planes diseñados para crecer tu negocio</p>
+<p>Elige el plan ideal para tu negocio</p>
 </div>
 
 <div class="packs">
@@ -150,7 +220,7 @@ font-size:.9em;
 </ul>
 
 <a class="btn"
-href="https://wa.me/584146701540?text=Hola%2C+quiero+el+Pack+Inicial+de+5+reseñas">
+href="https://wa.me/584146701540?text=Quiero+el+Pack+Inicial">
 Comprar</a>
 </div>
 
@@ -162,4 +232,189 @@ Comprar</a>
 <div class="price">€20.00</div>
 
 <ul>
-<li>✔ Ma
+<li>✔ Mayor visibilidad</li>
+<li>✔ Clientes reales</li>
+<li>✔ Soporte rápido</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/584146701540?text=Quiero+el+Pack+Básico">
+Comprar</a>
+</div>
+
+
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Moderado</h3>
+<p>50 Reseñas</p>
+<div class="price">€105.00</div>
+
+<ul>
+<li>✔ Posicionamiento</li>
+<li>✔ Imagen profesional</li>
+<li>✔ Soporte prioritario</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/584146701540?text=Quiero+el+Pack+50">
+Comprar</a>
+</div>
+
+
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Premium</h3>
+<p>100 Reseñas</p>
+<div class="price">€199.99</div>
+
+<ul>
+<li>✔ Alta reputación</li>
+<li>✔ Más conversiones</li>
+<li>✔ Soporte 24/7</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/584146701540?text=Quiero+el+Pack+Premium">
+Comprar</a>
+</div>
+
+
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Intermedio</h3>
+<p>270 Reseñas</p>
+<div class="price">€370.00</div>
+
+<ul>
+<li>✔ Gran posicionamiento</li>
+<li>✔ Alta confianza</li>
+<li>✔ Soporte prioritario</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/584146701540?text=Quiero+el+Pack+270">
+Comprar</a>
+</div>
+
+
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Oro</h3>
+<p>500 Reseñas</p>
+<div class="price">€800.00</div>
+
+<ul>
+<li>✔ Marca líder</li>
+<li>✔ Máxima confianza</li>
+<li>✔ Asesor personal</li>
+</ul>
+
+<a class="btn"
+href="https://wa.me/584146701540?text=Quiero+el+Pack+Oro">
+Comprar</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- INFO -->
+
+<section>
+
+<div class="title">
+<h2>ℹ️ ¿Para qué sirven las reseñas?</h2>
+</div>
+
+<div class="info">
+
+<div class="info-box">
+<h3>📈 Aumenta tus ventas</h3>
+<p>
+Las reseñas generan confianza inmediata y convierten
+visitas en clientes reales.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🌟 Imagen profesional</h3>
+<p>
+Un negocio con buenas valoraciones transmite seriedad
+y credibilidad.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🔍 Mayor visibilidad</h3>
+<p>
+Las plataformas priorizan negocios bien valorados.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🤝 Reputación sólida</h3>
+<p>
+Construye una marca confiable a largo plazo.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- OPINIONES -->
+
+<section>
+
+<div class="title">
+<h2>💬 Opiniones de Clientes</h2>
+</div>
+
+<div class="reviews">
+
+<div class="review">
+<p>
+"Desde que contraté este servicio, mis ventas crecieron
+muchísimo. Totalmente recomendado."
+</p>
+<span>★★★★★ Carlos M.</span>
+</div>
+
+
+<div class="review">
+<p>
+"Entrega rápida y atención profesional. Mi negocio ahora
+se ve mucho más confiable."
+</p>
+<span>★★★★★ Laura G.</span>
+</div>
+
+
+<div class="review">
+<p>
+"Resultados reales y excelente soporte. Volvería a contratar."
+</p>
+<span>★★★★★ Andrés R.</span>
+</div>
+
+</div>
+</section>
+
+
+<footer>
+
+<p>© 2026 Reseñas Pro | Todos los derechos reservados</p>
+<p>WhatsApp: +58 414 670 1540</p>
+
+</footer>
+
+
+<a class="whatsapp"
+href="https://wa.me/584146701540?text=Hola%2C+quiero+información"
+target="_blank">
+💬 WhatsApp
+</a>
+
+
+</body>
+</html>
