@@ -3,65 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas Pro ⭐</title>
 
-<title>ReviewPositive | Marketing Digital</title>
-
-<!-- Favicon -->
 <link rel="icon" href="favicon.png" type="image/png">
-
-<!-- Fuente -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-background:#f4f6f9;
-color:#222;
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:#fff;
 }
 
 /* HEADER */
 
 header{
-background:#0d1b2a;
-color:white;
-padding:25px;
+background:rgba(0,0,0,0.6);
+padding:50px 20px;
 text-align:center;
 }
 
 header h1{
-font-size:34px;
+font-size:2.6em;
+margin:0;
 }
 
 header p{
-opacity:0.8;
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(120deg,#1b263b,#415a77);
-color:white;
-padding:90px 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.hero p{
+opacity:.9;
 max-width:700px;
 margin:auto;
-font-size:18px;
 }
 
 /* SECTION */
@@ -72,113 +43,135 @@ max-width:1200px;
 margin:auto;
 }
 
-/* PRODUCTS */
+.title{
+text-align:center;
+margin-bottom:40px;
+}
 
-.products{
+.title h2{
+font-size:2em;
+margin-bottom:10px;
+}
+
+/* PACKS */
+
+.packs{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.product{
-background:white;
-padding:25px;
+.pack{
+background:rgba(255,255,255,0.12);
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+padding:25px;
 text-align:center;
-transition:0.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+transition:.3s;
 }
 
-.product:hover{
-transform:translateY(-8px);
+.pack:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.18);
 }
 
-.product h3{
+.stars{
+font-size:1.5em;
+color:gold;
 margin-bottom:10px;
 }
 
 .price{
-font-size:26px;
-font-weight:700;
-color:#1b263b;
+font-size:1.9em;
+color:#00ffcc;
 margin:15px 0;
+font-weight:bold;
 }
 
-.product button{
-background:#1b263b;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:25px;
-cursor:pointer;
-font-size:15px;
-transition:0.3s;
+/* INFO */
+
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.product button:hover{
-background:#415a77;
+.info-box{
+background:rgba(255,255,255,0.12);
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* TESTIMONIOS */
-
-.testimonials{
-background:#e9eef5;
-}
+/* REVIEWS */
 
 .reviews{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .review{
-background:white;
-padding:25px;
+background:rgba(255,255,255,0.12);
+padding:22px;
 border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* BOTON CARRITO */
+/* BOTONES */
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#00ffcc;
+color:#000;
+padding:12px 22px;
+border-radius:25px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+border:none;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#00e6b8;
+transform:scale(1.05);
+}
+
+/* CARRITO */
 
 .cart-btn{
 position:fixed;
 bottom:90px;
 right:20px;
-background:#1b263b;
-color:white;
+background:#00ffcc;
+color:#000;
 border:none;
-padding:15px 22px;
-border-radius:50px;
+padding:14px 22px;
+border-radius:30px;
+font-weight:bold;
 cursor:pointer;
-font-weight:600;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
 z-index:999;
 }
 
-/* MODAL */
-
-.modal{
+.cart-modal{
 display:none;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.7);
 z-index:1000;
 }
 
-.modal-content{
-background:white;
-max-width:500px;
+.cart-box{
+background:#203a43;
+max-width:400px;
 margin:80px auto;
 padding:25px;
 border-radius:15px;
-}
-
-.modal-content h3{
-text-align:center;
-margin-bottom:15px;
 }
 
 .cart-item{
@@ -192,26 +185,8 @@ background:red;
 color:white;
 border:none;
 border-radius:50%;
-width:25px;
-height:25px;
-cursor:pointer;
-}
-
-.total{
-font-size:20px;
-font-weight:700;
-margin-top:15px;
-text-align:center;
-}
-
-.modal-content .btn{
-width:100%;
-margin-top:10px;
-padding:12px;
-border:none;
-border-radius:25px;
-background:#1b263b;
-color:white;
+width:22px;
+height:22px;
 cursor:pointer;
 }
 
@@ -221,26 +196,24 @@ cursor:pointer;
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25d366;
+background:#25D366;
 color:white;
-width:55px;
-height:55px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
+padding:14px 22px;
+border-radius:50px;
 text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.5);
 z-index:999;
 }
 
 /* FOOTER */
 
 footer{
-background:#0d1b2a;
-color:white;
+background:rgba(0,0,0,0.7);
 text-align:center;
-padding:20px;
+padding:25px;
+font-size:.9em;
+opacity:.9;
 }
 
 </style>
@@ -248,120 +221,126 @@ padding:20px;
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-<h1>ReviewPositive</h1>
-<p>Impulsamos tu negocio digital</p>
+<h1>⭐ Reseñas Pro</h1>
+<p>Impulsa tu negocio con reseñas positivas y aumenta tus ventas</p>
 </header>
 
-<!-- HERO -->
-
-<div class="hero">
-<h2>Haz crecer tu marca hoy</h2>
-<p>Marketing digital, reputación online y posicionamiento profesional.</p>
-</div>
-
-<!-- SERVICIOS -->
+<!-- PACKS -->
 
 <section>
 
-<h2 style="text-align:center;margin-bottom:40px;">Nuestros Servicios</h2>
+<div class="title">
+<h2>📦 Nuestros Packs</h2>
+</div>
 
-<div class="products">
+<div class="packs">
 
-<div class="product">
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Inicial</h3>
+<p>5 Reseñas</p>
+<div class="price">12.50€</div>
+<button class="btn" onclick="addCart('Pack Inicial',12.5)">Agregar</button>
+</div>
+
+<div class="pack">
+<div class="stars">★★★★★</div>
 <h3>Pack Básico</h3>
-<p>Ideal para comenzar</p>
-<div class="price">$15</div>
-<button onclick="addCart('Pack Básico',15)">Agregar al carrito</button>
+<p>10 Reseñas</p>
+<div class="price">20€</div>
+<button class="btn" onclick="addCart('Pack Básico',20)">Agregar</button>
 </div>
 
-<div class="product">
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Moderado</h3>
+<p>50 Reseñas</p>
+<div class="price">105€</div>
+<button class="btn" onclick="addCart('Pack Moderado',105)">Agregar</button>
+</div>
+
+<div class="pack">
+<div class="stars">★★★★★</div>
 <h3>Pack Premium</h3>
-<p>Mayor visibilidad</p>
-<div class="price">$35</div>
-<button onclick="addCart('Pack Premium',35)">Agregar al carrito</button>
+<p>100 Reseñas</p>
+<div class="price">199.99€</div>
+<button class="btn" onclick="addCart('Pack Premium',199.99)">Agregar</button>
 </div>
 
-<div class="product">
-<h3>Pack Empresarial</h3>
-<p>Máximo alcance</p>
-<div class="price">$60</div>
-<button onclick="addCart('Pack Empresarial',60)">Agregar al carrito</button>
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Intermedio</h3>
+<p>270 Reseñas</p>
+<div class="price">370€</div>
+<button class="btn" onclick="addCart('Pack Intermedio',370)">Agregar</button>
+</div>
+
+<div class="pack">
+<div class="stars">★★★★★</div>
+<h3>Pack Oro</h3>
+<p>500 Reseñas</p>
+<div class="price">800€</div>
+<button class="btn" onclick="addCart('Pack Oro',800)">Agregar</button>
 </div>
 
 </div>
-
 </section>
 
-<!-- TESTIMONIOS -->
+<!-- OPINIONES -->
 
-<section class="testimonials">
+<section>
 
-<h2 style="text-align:center;margin-bottom:40px;">Opiniones de Clientes</h2>
+<div class="title">
+<h2>💬 Opiniones</h2>
+</div>
 
 <div class="reviews">
 
-<div class="review">
-⭐⭐⭐⭐⭐<br>
-"Excelente servicio, aumenté mis ventas."<br>
-<b>- Carlos</b>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐<br>
-"Muy confiable y rápido."<br>
-<b>- María</b>
-</div>
-
-<div class="review">
-⭐⭐⭐⭐⭐<br>
-"Lo recomiendo totalmente."<br>
-<b>- José</b>
-</div>
+<div class="review">★★★★★ Carlos M.</div>
+<div class="review">★★★★★ Laura G.</div>
+<div class="review">★★★★★ Andrés R.</div>
 
 </div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
-<p>© 2026 ReviewPositive - Todos los derechos reservados</p>
+
+<p>© 2026 Reseñas Pro</p>
+<p>WhatsApp: +58 414 670 1540</p>
+
 </footer>
 
 <!-- BOTON CARRITO -->
 
 <button class="cart-btn" onclick="openCart()">
-🛒 Ver Carrito (<span id="count">0</span>)
+🛒 Carrito (<span id="count">0</span>)
 </button>
 
 <!-- MODAL -->
 
-<div class="modal" id="cartModal">
+<div class="cart-modal" id="cart">
 
-<div class="modal-content">
+<div class="cart-box">
 
 <h3>Tu Carrito</h3>
 
 <div id="cartItems"></div>
 
-<div class="total">Total: $<span id="total">0</span></div>
+<p><b>Total: €<span id="total">0</span></b></p>
 
-<button class="btn" onclick="checkout()">Continuar Pago</button>
-
+<button class="btn" onclick="checkout()">Proceder al pago</button>
 <button class="btn" onclick="closeCart()">Cerrar</button>
 
 </div>
-
 </div>
 
 <!-- WHATSAPP -->
 
-<a href="https://wa.me/584000000000" class="whatsapp" target="_blank">
-💬
-</a>
+<a class="whatsapp"
+href="https://wa.me/584146701540"
+target="_blank">💬</a>
 
 <!-- SCRIPT -->
 
@@ -374,34 +353,31 @@ function addCart(name,price){
 cart.push({name,price});
 updateCart();
 
-alert("Producto agregado al carrito");
-
 }
 
 function updateCart(){
 
-let items=document.getElementById("cartItems");
+let items="";
 let total=0;
 
-items.innerHTML="";
+cart.forEach((item,i)=>{
 
-cart.forEach((item,index)=>{
-
-total+=item.price;
-
-items.innerHTML+=`
+items+=`
 <div class="cart-item">
 <span>${item.name}</span>
 <span>
-$${item.price}
-<button onclick="removeItem(${index})">✖</button>
+€${item.price}
+<button onclick="removeItem(${i})">x</button>
 </span>
 </div>
 `;
 
+total+=item.price;
+
 });
 
-document.getElementById("total").innerText=total;
+document.getElementById("cartItems").innerHTML=items;
+document.getElementById("total").innerText=total.toFixed(2);
 document.getElementById("count").innerText=cart.length;
 
 }
@@ -415,13 +391,13 @@ updateCart();
 
 function openCart(){
 
-document.getElementById("cartModal").style.display="block";
+document.getElementById("cart").style.display="block";
 
 }
 
 function closeCart(){
 
-document.getElementById("cartModal").style.display="none";
+document.getElementById("cart").style.display="none";
 
 }
 
@@ -435,3 +411,4 @@ alert("Próximamente pagos con tarjeta y PayPal");
 
 </body>
 </html>
+
