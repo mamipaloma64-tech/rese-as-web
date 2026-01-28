@@ -14,22 +14,15 @@ background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:#fff;
 }
 
+/* HEADER */
+
 header{
 background:rgba(0,0,0,0.6);
 padding:50px 20px;
 text-align:center;
 }
 
-header h1{
-font-size:2.6em;
-margin:0;
-}
-
-header p{
-opacity:.9;
-max-width:700px;
-margin:auto;
-}
+/* SECCIONES */
 
 section{
 padding:60px 20px;
@@ -37,17 +30,7 @@ max-width:1200px;
 margin:auto;
 }
 
-.title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.title h2{
-font-size:2em;
-margin-bottom:10px;
-}
-
-/* Packs */
+/* PACKS */
 
 .packs{
 display:grid;
@@ -66,94 +49,62 @@ transition:.3s;
 
 .pack:hover{
 transform:translateY(-6px);
-background:rgba(255,255,255,0.18);
 }
 
-.stars{
-font-size:1.5em;
-color:gold;
-margin-bottom:10px;
-}
-
-.price{
-font-size:1.9em;
-color:#00ffcc;
-margin:15px 0;
-font-weight:bold;
-}
-
-.pack ul{
-list-style:none;
-padding:0;
-margin:15px 0;
-}
-
-.pack ul li{
-padding:6px 0;
-opacity:.9;
-}
-
-/* Info */
-
-.info{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.info-box{
-background:rgba(255,255,255,0.12);
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
-}
-
-.info-box h3{
-margin-top:0;
-color:#00ffcc;
-}
-
-/* Reviews */
-
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.review{
-background:rgba(255,255,255,0.12);
-padding:22px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
-}
-
-.review span{
-color:gold;
-font-weight:bold;
-}
-
-/* Botones */
+/* BOTONES */
 
 .btn{
-display:inline-block;
-margin-top:15px;
 background:#00ffcc;
-color:#000;
-padding:12px 22px;
-border-radius:25px;
 border:none;
-cursor:pointer;
+padding:12px 20px;
+border-radius:25px;
 font-weight:bold;
-transition:.3s;
+cursor:pointer;
+margin-top:10px;
 }
 
 .btn:hover{
 background:#00e6b8;
-transform:scale(1.05);
 }
 
-/* WhatsApp flotante */
+/* CARRITO */
+
+#cartBox{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#111;
+width:280px;
+border-radius:15px;
+padding:15px;
+box-shadow:0 0 15px #000;
+z-index:1000;
+}
+
+#cartBox h3{
+margin:0 0 10px;
+text-align:center;
+color:#00ffcc;
+}
+
+#cartItems{
+max-height:200px;
+overflow:auto;
+font-size:.9em;
+}
+
+.cartItem{
+border-bottom:1px solid #333;
+padding:5px 0;
+}
+
+#total{
+margin-top:10px;
+font-weight:bold;
+text-align:center;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
@@ -165,22 +116,7 @@ padding:14px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 5px 15px rgba(0,0,0,.5);
 z-index:999;
-}
-
-.whatsapp:hover{
-background:#1ebe5d;
-}
-
-/* Footer */
-
-footer{
-background:rgba(0,0,0,0.7);
-text-align:center;
-padding:25px;
-font-size:.9em;
-opacity:.9;
 }
 
 </style>
@@ -190,202 +126,81 @@ opacity:.9;
 
 <header>
 <h1>⭐ Reseñas Pro</h1>
-<p>
-Impulsa tu negocio con reseñas positivas, mejora tu reputación
-y aumenta tus ventas con nuestros planes profesionales.
-</p>
+<p>Impulsa tu negocio con reseñas profesionales</p>
 </header>
-
 
 <section>
 
-<div class="title">
-<h2>📦 Nuestros Packs</h2>
-<p>Elige el plan ideal para tu negocio</p>
-</div>
+<h2 style="text-align:center">📦 Nuestros Packs</h2>
 
 <div class="packs">
 
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Inicial</h3>
 <p>5 Reseñas</p>
-<div class="price">€12.50</div>
-
-<ul>
-<li>✔ Reseñas reales</li>
-<li>✔ Entrega rápida</li>
-<li>✔ Soporte básico</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Inicial',12.50)">
-Agregar al carrito
-</button>
+<h2>€12.50</h2>
+<button class="btn" onclick="addToCart('Pack Inicial',12.50)">Agregar</button>
 </div>
 
-
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Básico</h3>
 <p>10 Reseñas</p>
-<div class="price">€20.00</div>
-
-<ul>
-<li>✔ Mayor visibilidad</li>
-<li>✔ Clientes reales</li>
-<li>✔ Soporte rápido</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Básico',20.00)">
-Agregar al carrito
-</button>
+<h2>€20.00</h2>
+<button class="btn" onclick="addToCart('Pack Básico',20)">Agregar</button>
 </div>
 
-
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Moderado</h3>
 <p>50 Reseñas</p>
-<div class="price">€105.00</div>
-
-<ul>
-<li>✔ Posicionamiento</li>
-<li>✔ Imagen profesional</li>
-<li>✔ Soporte prioritario</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Moderado',105.00)">
-Agregar al carrito
-</button>
+<h2>€105.00</h2>
+<button class="btn" onclick="addToCart('Pack Moderado',105)">Agregar</button>
 </div>
 
-
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Premium</h3>
 <p>100 Reseñas</p>
-<div class="price">€199.99</div>
-
-<ul>
-<li>✔ Alta reputación</li>
-<li>✔ Más conversiones</li>
-<li>✔ Soporte 24/7</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Premium',199.99)">
-Agregar al carrito
-</button>
+<h2>€199.99</h2>
+<button class="btn" onclick="addToCart('Pack Premium',199.99)">Agregar</button>
 </div>
 
-
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Intermedio</h3>
 <p>270 Reseñas</p>
-<div class="price">€370.00</div>
-
-<ul>
-<li>✔ Gran posicionamiento</li>
-<li>✔ Alta confianza</li>
-<li>✔ Soporte prioritario</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Intermedio',370.00)">
-Agregar al carrito
-</button>
+<h2>€370.00</h2>
+<button class="btn" onclick="addToCart('Pack Intermedio',370)">Agregar</button>
 </div>
-
 
 <div class="pack">
-<div class="stars">★★★★★</div>
 <h3>Pack Oro</h3>
 <p>500 Reseñas</p>
-<div class="price">€800.00</div>
-
-<ul>
-<li>✔ Marca líder</li>
-<li>✔ Máxima confianza</li>
-<li>✔ Asesor personal</li>
-</ul>
-
-<button class="btn" onclick="addToCart('Pack Oro',800.00)">
-Agregar al carrito
-</button>
+<h2>€800.00</h2>
+<button class="btn" onclick="addToCart('Pack Oro',800)">Agregar</button>
 </div>
 
 </div>
+
 </section>
 
 
-<section>
+<!-- CARRITO -->
 
-<div class="title">
-<h2>ℹ️ ¿Para qué sirven las reseñas?</h2>
-</div>
+<div id="cartBox">
 
-<div class="info">
+<h3>🛒 Carrito</h3>
 
-<div class="info-box">
-<h3>📈 Aumenta tus ventas</h3>
-<p>Las reseñas generan confianza inmediata.</p>
-</div>
+<div id="cartItems"></div>
 
-<div class="info-box">
-<h3>🌟 Imagen profesional</h3>
-<p>Un negocio con buenas valoraciones vende más.</p>
-</div>
+<div id="total">Total: €0</div>
 
-<div class="info-box">
-<h3>🔍 Mayor visibilidad</h3>
-<p>Las plataformas priorizan negocios bien valorados.</p>
-</div>
-
-<div class="info-box">
-<h3>🤝 Reputación sólida</h3>
-<p>Construye una marca confiable.</p>
-</div>
+<button class="btn" onclick="checkout()">Proceder al pago</button>
 
 </div>
-</section>
 
 
-<section>
-
-<div class="title">
-<h2>💬 Opiniones</h2>
-</div>
-
-<div class="reviews">
-
-<div class="review">
-<p>"Excelente servicio."</p>
-<span>★★★★★ Carlos</span>
-</div>
-
-<div class="review">
-<p>"Muy recomendado."</p>
-<span>★★★★★ Laura</span>
-</div>
-
-<div class="review">
-<p>"Resultados reales."</p>
-<span>★★★★★ Andrés</span>
-</div>
-
-</div>
-</section>
-
-
-<footer>
-
-<p>© 2026 Reseñas Pro</p>
-<p>WhatsApp: +58 414 670 1540</p>
-
-</footer>
-
+<!-- WHATSAPP -->
 
 <a class="whatsapp"
-href="https://wa.me/584146701540?text=Hola%2C+quiero+información"
+href="https://wa.me/584146701540"
 target="_blank">
 💬 WhatsApp
 </a>
@@ -397,9 +212,44 @@ let cart = [];
 
 function addToCart(name, price){
 
-cart.push({name, price});
+cart.push({name,price});
 
-alert(name + " agregado al carrito");
+renderCart();
+
+}
+
+function renderCart(){
+
+let html="";
+let total=0;
+
+cart.forEach((item,i)=>{
+
+html+=`
+<div class="cartItem">
+${item.name} - €${item.price.toFixed(2)}
+</div>
+`;
+
+total+=item.price;
+
+});
+
+document.getElementById("cartItems").innerHTML=html;
+
+document.getElementById("total").innerText=
+"Total: €"+total.toFixed(2);
+
+}
+
+function checkout(){
+
+if(cart.length===0){
+alert("Tu carrito está vacío");
+return;
+}
+
+alert("Próximamente pagos con tarjeta y PayPal 🚀");
 
 }
 
